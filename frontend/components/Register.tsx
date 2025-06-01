@@ -11,7 +11,7 @@ const Register = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    await axios.post("/api/auth/register", form);
+    await axios.post(`${import.meta.env.VITE_API_URL}/api/auth/register`, form);
     alert("Registo concluído! Faça login.");
     navigate("/login");
   };

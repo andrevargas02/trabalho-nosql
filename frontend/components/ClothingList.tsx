@@ -9,7 +9,7 @@ const ClothingList = () => {
   const addToCart = useCart((state) => state.add);  // ✅ callback tipado
 
   useEffect(() => {
-    axios.get("/api/clothing").then((res) => {
+    axios.get(`${import.meta.env.VITE_API_URL}/api/clothing`).then((res) => {
       const list: ClothingItem[] = Array.isArray(res.data)
         ? res.data
         : res.data.data;

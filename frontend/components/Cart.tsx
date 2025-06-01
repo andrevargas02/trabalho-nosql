@@ -21,7 +21,9 @@ const Cart = () => {
       // faz PATCH /buy para cada quantidade
       const requests = cartItems.flatMap((i) =>
         Array.from({ length: i.qty }).map(() =>
-          axios.patch(`/api/clothing/${i.product._id}/buy`)
+          axios.patch(
+            `${import.meta.env.VITE_API_URL}/api/clothing/${i.product._id}/buy`
+          )
         )
       );
       await Promise.all(requests);

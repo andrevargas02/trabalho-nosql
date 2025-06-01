@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-
-
 function AddClothingForm() {
   const [form, setForm] = useState({
     name: "",
@@ -24,7 +22,7 @@ function AddClothingForm() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     axios
-      .post("/api/clothing", {
+      .post(`${import.meta.env.VITE_API_URL}/api/clothing`, {
         ...form,
         price: parseFloat(form.price),
         stock: parseInt(form.stock),
