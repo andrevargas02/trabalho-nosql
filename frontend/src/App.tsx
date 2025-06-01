@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { AuthProvider, RequireAuth } from "./auth";
+import { AuthProvider, RequireAuth } from "./Auth";
 import ClothingList from "../components/ClothingList";
 import Login from "../components/Login";
 import Register from "../components/Register";
