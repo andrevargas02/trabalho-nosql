@@ -9,4 +9,9 @@ export default defineConfig({
       '/fotos': 'http://localhost:5000',
     },
   },
+  preview: {
+    port: 8080,
+    host: true,
+    allowedHosts: ['trabalho-nosql-3.onrender.com'], // <- aqui está o necessário para Render
+  },
 })
