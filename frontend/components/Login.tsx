@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useAuth } from "../src/auth";
+import { useAuth } from "../src/Auth";
 import { useNavigate, Link } from "react-router-dom";
 
 const Login = () => {
